@@ -1,12 +1,12 @@
 ![python_vesion](https://img.shields.io/badge/Python%20-%3E%3D%203.5-green.svg)  
-# 用 Python + itchat 写一个爬虫脚本每天定时给多个女友发给微信暖心话
+# 用 Python + itchat 写一个爬虫脚本每天定时给多个女朋友发微信暖心话
 
 ## 待优化功能：
 
 > * [ ]  更友好的 DEBUG 和文档，方便第一次跑通程序。
 > * [ ]  图灵机器人自动回复。
 > * [ ]  断线提醒。
-> * [ ]  给女友群发消息。
+> * [ ]  给女朋友们群发消息。
 
 ---
 ## 项目介绍：
@@ -15,14 +15,13 @@
 
     Python >= 3.5
 
-### 灵感来源
+### Main
 
-在掘金看到了一篇《[用Node+wechaty写一个爬虫脚本每天定时给女(男)朋友发微信暖心话](https://juejin.im/post/5c77c6bef265da2de6611cff)》后，我就想为什么不用 Python 去实现这个功能呢。 JUST DO IT，说做就做。  
-这文章的结构也是参考上面这位朋友的。  
-本来只是写单人的，不过有些优（作）秀（死）的人表示女朋友不止一个。现已支持添加多人信息。
+Bash on《[用Node+wechaty写一个爬虫脚本每天定时给女(男)朋友发微信暖心话](https://juejin.im/post/5c77c6bef265da2de6611cff)》，design by Python。    
+现已支持添加多名女朋友进行暧昧。
 
 ### 项目地址：
-Github: [https://github.com/sfyc23/EverydayWechat](https://github.com/sfyc23/EverydayWechat)。
+Github: [https://github.com/ChineTsai/EverydayWechat](https://github.com/ChineTsai/EverydayWechat)。
 
 
 ### 使用库
@@ -32,7 +31,7 @@ Github: [https://github.com/sfyc23/EverydayWechat](https://github.com/sfyc23/Eve
 - [APScheduler](https://apscheduler.readthedocs.io/en/latest/) - 定时任务
 
 ### 功能
-定时给女朋友发送每日天气、提醒、每日一句。
+定时给女朋友们发送每日天气、提醒、或一句曖昧的说话。
 
 ### 数据来源
 - 每日一句和上面的大佬一样也是来自 [ONE●一个](http://wufazhuce.com/)
@@ -62,7 +61,7 @@ Github: [https://github.com/sfyc23/EverydayWechat](https://github.com/sfyc23/Eve
 ```
 # 定时任务
 scheduler = BlockingScheduler()
-# 每天9：30给女朋友发送每日一句
+# 每天9：30给女朋友们发送每日一句
 # scheduler.add_job(start_today_info, 'cron', hour=9, minute=30)
 scheduler.start()
 ```
@@ -171,7 +170,7 @@ girlfriend_infos:
     #女友所在桂林
     city_name: '桂林'
     # 从那天开始勾搭的（可空）
-    start_date: '2017-11-11'
+    start_date: '2011-11-11'
     # 短句的最后留言（可空）
     sweet_words: '来自最爱你的我。'
 
@@ -179,8 +178,8 @@ girlfriend_infos:
   -
     wechat_name: '陈老师'
     city_name: '朝阳区'
-    start_date: '2018-11-11'
-    sweet_words: '来自你俊美的老公。'
+    start_date: '2011-11-11'
+    sweet_words: '来自你可愛的老公。'
 ```
 
 ## 项目运行
@@ -208,7 +207,7 @@ sudo docker run --name '项目所在地址'
 ```
 
 ## 最后
-项目地址：[https://github.com/sfyc23/EverydayWechat](https://github.com/sfyc23/EverydayWechat)  。
+项目地址：[https://github.com/ChineTsai/EverydayWechat](https://github.com/ChineTsai/EverydayWechat)  。
 写完后才发现，我并没有女朋友啊！
 
 ## 类似项目
